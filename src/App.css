@@ -41,3 +41,32 @@ body {
     transform: rotate(360deg);
   }
 }
+
+.buttons_container {
+  border: 0.1rem;
+  border-color: #eeeeee;
+  border-style: solid;
+  margin-right: auto;
+  padding: 1rem;
+}
+
+.button_header_wrapper {
+  padding: 1rem;
+  text-align: justify;
+}
+
+.code_box {
+  background-color: #eeeeee;
+  border-color: #eeeeee;
+  border-style: solid;
+  padding: 1rem;
+  overflow: scroll;
+}
+
+/* Media Queries */
+@media (min-width: 1024px) {
+  .buttons_container {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
