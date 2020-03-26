@@ -42,7 +42,7 @@ body {
   }
 }
 
-.buttons_container {
+.buttonsContainer {
   border: 0.1rem;
   border-color: #eeeeee;
   border-style: solid;
@@ -50,12 +50,12 @@ body {
   padding: 1rem;
 }
 
-.button_header_wrapper {
-  padding: 1rem;
+.buttonsHeaderWrapper {
+  margin: 1rem;
   text-align: justify;
 }
 
-.code_box {
+.codeBox {
   background-color: #eeeeee;
   border-color: #eeeeee;
   border-style: solid;
@@ -64,9 +64,9 @@ body {
 }
 
 /* Media Queries */
-@media (min-width: 1024px) {
-  .buttons_container {
+@media (min-width: 64rem) {
+  .buttonsContainer {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
   }
 }
