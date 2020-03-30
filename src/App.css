@@ -63,10 +63,20 @@ body {
   overflow: scroll;
 }
 
+.closeIconBtnContainer {
+  display: flex;
+  align-items: center;
+}
+
+.deleteIconBtnContainer {
+  display: flex;
+  align-items: center;
+}
+
 /* Media Queries */
-@media (min-width: 64rem) {
+/* @media (min-width: 64rem) {
   .buttonsContainer {
     display: flex;
     justify-content: center;
   }
-}
+} */

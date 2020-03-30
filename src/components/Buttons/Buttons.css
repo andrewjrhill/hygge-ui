@@ -91,3 +91,13 @@ a.linkButton:hover {
   box-shadow: 0 0.3125rem 2.5rem -0.625rem #000;
   text-shadow: 0 0 0.375rem #fff;
 }
+
+button.small {
+  padding: 8px 12px;
+  font-size: 0.75rem;
+}
+
+button.large {
+  padding: 14px 28px;
+  font-size: 1rem;
+}

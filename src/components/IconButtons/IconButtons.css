@@ -16,3 +16,32 @@
   height: 1.5rem;
   display: block;
 }
+
+button.iconButton.small {
+  padding: 0;
+  font-size: 0;
+  height: 34px;
+  width: 34px;
+}
+
+button.iconButton.large {
+  padding: 0;
+  font-size: 0;
+  height: 60px;
+  width: 60px;
+}
+
+button.iconButton.small > svg {
+  width: 18px;
+  height: 18px;
+}
+
+button.iconButton.medium > svg {
+  width: 26px;
+  height: 26px;
+}
+
+button.iconButton.large > svg {
+  width: 37px;
+  height: 37px;
+}

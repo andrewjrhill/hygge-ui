@@ -1,13 +1,12 @@
 import React from "react";
-import classNames from "classnames";
 import "./IconButtons.css";
 import "../Buttons/Buttons.css";
 
 const IconButton = props => {
-  const { color, children, disabled } = props;
+  const { color, children, disabled, size } = props;
 
   return (
-    <button className={classNames(color, "iconButton")} disabled={disabled}>
+    <button className={`${color} ${size} iconButton`} disabled={disabled}>
       {children}
     </button>
   );
