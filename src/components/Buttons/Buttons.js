@@ -2,11 +2,20 @@ import React from "react";
 import "./Buttons.css";
 
 const Button = props => {
-  const { color, children, disabled, isLink, hrefLink, size } = props;
+  const {
+    color,
+    children,
+    disabled,
+    isLink,
+    hrefLink,
+    size,
+    iconLabelBtn,
+    textButton
+  } = props;
 
   if (isLink === true) {
     return (
-      <a href={hrefLink} className={color}>
+      <a href={hrefLink} className={`${color} ${textButton}`}>
         {children}
       </a>
     );
@@ -14,7 +23,7 @@ const Button = props => {
     return (
       <button
         // className={classNames(color, size)} third-party imported className library another option instead of template literal example below. NB to import.
-        className={`${color} ${size}`}
+        className={`${color} ${size} ${textButton} ${iconLabelBtn}`}
         disabled={disabled}
       >
         {children}

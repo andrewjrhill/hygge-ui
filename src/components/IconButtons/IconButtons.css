@@ -20,28 +20,28 @@
 button.iconButton.small {
   padding: 0;
   font-size: 0;
-  height: 34px;
-  width: 34px;
+  height: 2.125rem;
+  width: 2.125rem;
 }
 
 button.iconButton.large {
   padding: 0;
   font-size: 0;
-  height: 60px;
-  width: 60px;
+  height: 3.75rem;
+  width: 3.75rem;
 }
 
 button.iconButton.small > svg {
-  width: 18px;
-  height: 18px;
+  width: 1.125rem;
+  height: 1.125rem;
 }
 
 button.iconButton.medium > svg {
-  width: 26px;
-  height: 26px;
+  width: 1.625rem;
+  height: 1.625rem;
 }
 
 button.iconButton.large > svg {
-  width: 37px;
-  height: 37px;
+  width: 2.375rem;
+  height: 2.375rem;
 }

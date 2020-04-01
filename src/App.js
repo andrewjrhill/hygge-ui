@@ -1,5 +1,17 @@
 import React from "react";
-import { Trash, Clock, ShoppingCart, Search, Download, X } from "react-feather";
+import {
+  Trash,
+  Clock,
+  ShoppingCart,
+  Search,
+  Download,
+  X,
+  Send,
+  Upload,
+  MicOff,
+  Mic,
+  Save
+} from "react-feather";
 import "./App.css";
 import Buttons from "./components/Buttons/Buttons";
 import IconButtons from "./components/IconButtons/IconButtons";
@@ -19,7 +31,6 @@ function App() {
           Use any of the available button style types to quickly create a styled
           button. Just modify the variant prop.
         </p>
-
         <div className="buttonsContainer">
           <Buttons color="primary">Primary</Buttons>
           <Buttons color="secondary">Secondary</Buttons>
@@ -88,6 +99,9 @@ function App() {
           <IconButtons color="disabled" disabled={true}>
             <Trash />
           </IconButtons>
+          <IconButtons color="primary">
+            <Upload />
+          </IconButtons>
         </div>
         <pre className="codeBox">
           <code>
@@ -120,9 +134,14 @@ function App() {
     <IconButtons color="disabled" disabled={true}>
             <Trash />
     </IconButtons>
+
+    <IconButtons color="primary">
+            <Upload />
+    </IconButtons>
               `}
           </code>
         </pre>
+
         <div className="buttonsHeaderWrapper">
           <h2>Size buttons</h2>
           <p>
@@ -189,6 +208,193 @@ function App() {
     <Buttons size="large" color="primary">
               Large
     </Buttons>
+
+    <Buttons size="small" color="secondary">
+                Small
+    </Buttons>
+
+    <Buttons size="medium" color="secondary">
+                Medium
+    </Buttons>
+
+    <Buttons size="large" color="secondary">
+                Large
+    </Buttons>
+
+    <IconButtons size="small" color="secondary">
+                <X />
+    </IconButtons>
+
+    <IconButtons size="medium" color="secondary">
+                <X />
+    </IconButtons>
+
+    <IconButtons size="large" color="secondary">
+                <X />
+    </IconButtons>
+
+    <IconButtons size="small" color="danger">
+                <Trash />
+    </IconButtons>
+
+    <IconButtons size="medium" color="danger">
+                <Trash />
+    </IconButtons>
+
+    <IconButtons size="large" color="danger">
+                <Trash />
+    </IconButtons>
+              `}
+            </code>
+          </pre>
+        </div>
+
+        <div className="buttonsHeaderWrapper">
+          <h2>Buttons with icons and label</h2>
+          <p>
+            Sometimes you might want to have icons for certain button to enhance
+            the UX of the application as we recognize logos more easily than
+            plain text. For example, if you have a delete button you can label
+            it with a dustbin icon.
+          </p>
+          <div className="buttonsContainer">
+            <Buttons color="primary" iconLabelBtn="iconLabelBtn">
+              <Send />
+              Send
+            </Buttons>
+            <Buttons color="secondary" iconLabelBtn="iconLabelBtn">
+              <Upload />
+              Upload
+            </Buttons>
+            <Buttons color="success" iconLabelBtn="iconLabelBtn">
+              <Mic />
+              Talk
+            </Buttons>
+            <Buttons
+              color="disabled"
+              iconLabelBtn="iconLabelBtn"
+              disabled={true}
+            >
+              <MicOff />
+              Muted
+            </Buttons>
+            <Buttons color="warning" iconLabelBtn="iconLabelBtn">
+              <Save />
+              Save
+            </Buttons>
+            <Buttons color="danger" iconLabelBtn="iconLabelBtn">
+              <Trash />
+              Delete
+            </Buttons>
+          </div>
+          <pre className="codeBox">
+            <code>
+              {`import {Button} from "@hygge-ui/components/Button;
+  <Buttons color="primary">
+              <Send />
+              Send
+  </Buttons>
+
+  <Buttons color="secondary">
+              <Upload />
+              Upload
+  </Buttons>
+
+  <Buttons color="success">
+              <Mic />
+              Talk
+  </Buttons>
+
+  <Buttons color="disabled" disabled={true}>
+              <MicOff />
+              Muted
+  </Buttons>
+
+  <Buttons color="warning">
+              <Save />
+              Save
+  </Buttons>
+
+  <Buttons color="danger">
+              <Trash />
+              Delete
+  </Buttons>
+              `}
+            </code>
+          </pre>
+        </div>
+
+        <div className="buttonsHeaderWrapper">
+          <h2>Text Buttons</h2>
+          <p>
+            Text buttons are typically used for less-pronounced actions,
+            including those located: In dialogs In cards In cards, text buttons
+            help maintain an emphasis on card content.
+          </p>
+          <div className="buttonsContainer">
+            <Buttons color="primary" textButton="textButton">
+              Primary
+            </Buttons>
+            <Buttons color="secondary" textButton="textButton">
+              Secondary
+            </Buttons>
+            <Buttons color="success" textButton="textButton">
+              Success
+            </Buttons>
+            <Buttons color="warning" textButton="textButton">
+              Warning
+            </Buttons>
+            <Buttons color="danger" textButton="textButton">
+              Danger
+            </Buttons>
+            <Buttons
+              color="linkButton"
+              textButton="textButton"
+              isLink
+              hrefLink="/"
+            >
+              Link
+            </Buttons>
+            <Buttons color="disabled" textButton="textButton" disabled={true}>
+              Disabled
+            </Buttons>
+          </div>
+          <pre className="codeBox">
+            <code>
+              {`import {Button} from "@hygge-ui/components/Button;
+
+  <Buttons color="primary" textButton="textButton">
+              Primary
+  </Buttons>
+
+  <Buttons color="secondary" textButton="textButton">
+              Secondary
+  </Buttons>
+
+  <Buttons color="success" textButton="textButton">
+              Success
+  </Buttons>
+
+  <Buttons color="warning" textButton="textButton">
+              Warning
+  </Buttons>
+
+  <Buttons color="danger" textButton="textButton">
+              Danger
+  </Buttons>
+
+  <Buttons
+              color="linkButton"
+              textButton="textButton"
+              isLink
+              hrefLink="/"
+            >
+              Link
+  </Buttons>
+
+  <Buttons color="disabled" textButton="textButton" disabled={true}>
+              Disabled
+  </Buttons>
               `}
             </code>
           </pre>
