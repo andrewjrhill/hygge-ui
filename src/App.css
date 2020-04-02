@@ -73,6 +73,19 @@ body {
   align-items: center;
 }
 
+.textHeaderWrapper {
+  margin: 1rem;
+  text-align: justify;
+}
+
+.exampleTextContainer {
+  border: 0.1rem;
+  border-color: #eeeeee;
+  border-style: solid;
+  margin-right: auto;
+  padding: 1rem;
+}
+
 /* Media Queries */
 /* @media (min-width: 64rem) {
   .buttonsContainer {

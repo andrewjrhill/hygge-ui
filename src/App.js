@@ -15,6 +15,7 @@ import {
 import "./App.css";
 import Buttons from "./components/Buttons/Buttons";
 import IconButtons from "./components/IconButtons/IconButtons";
+import Text from "./components/Text/Text";
 
 function App() {
   return (
@@ -398,6 +399,29 @@ function App() {
               `}
             </code>
           </pre>
+        </div>
+
+        <div className="textHeaderWrapper">
+          <h1>Text</h1>
+          <p>
+            Use typography text to present your design and content as clearly
+            and efficiently as possible.
+          </p>
+          <h2>Examples</h2>
+          <div className="exampleTextContainer">
+            <Text variant="h1">h1. Heading</Text>
+            <Text variant="h2">h2. Heading</Text>
+            <Text variant="h3">h3. Heading</Text>
+            <Text variant="h4">h4. Heading</Text>
+            <Text variant="h5">h5. Heading</Text>
+            <Text variant="h6">h6. Heading</Text>
+            <Text variant="body">
+              body1. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Quos blanditiis tenetur unde suscipit, quam beatae rerum inventore
+              consectetur, neque doloribus, cupiditate numquam dignissimos
+              laborum fugiat deleniti? Eum quasi quidem quibusdam.
+            </Text>
+          </div>
         </div>
       </div>
     </header>
