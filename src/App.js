@@ -13,9 +13,15 @@ import {
   Save
 } from "react-feather";
 import "./App.css";
-import Buttons from "./components/Buttons/Buttons";
-import IconButtons from "./components/IconButtons/IconButtons";
+import Button from "./components/Button/Button";
+import Code from "./components/Code/Code";
+import IconButton from "./components/IconButton/IconButton";
 import Text from "./components/Text/Text";
+import { ButtonExamples } from "./components/Button/Button.examples";
+import { IconButtonExamples } from "./components/IconButton/IconButton.examples";
+import { IconLabelBtnExamples } from "./components/Button/IconLabelBtn.examples";
+import { SizeButtonExamples } from "./components/Button/SizeButton.examples";
+import { TextButtonExamples } from "./components/Button/TextButton.examples";
 
 function App() {
   return (
@@ -33,42 +39,19 @@ function App() {
           button. Just modify the variant prop.
         </p>
         <div className="buttonsContainer">
-          <Buttons color="primary">Primary</Buttons>
-          <Buttons color="secondary">Secondary</Buttons>
-          <Buttons color="success">Success</Buttons>
-          <Buttons color="warning">Warning</Buttons>
-          <Buttons color="danger">Danger</Buttons>
-          <Buttons color="linkButton" isLink hrefLink="/">
+          <Button color="primary">Primary</Button>
+          <Button color="secondary">Secondary</Button>
+          <Button color="success">Success</Button>
+          <Button color="warning">Warning</Button>
+          <Button color="danger">Danger</Button>
+          <Button color="linkButton" isLink hrefLink="/">
             Link
-          </Buttons>
-          <Buttons color="disabled" disabled={true}>
+          </Button>
+          <Button color="disabled" disabled={true}>
             Disabled
-          </Buttons>
+          </Button>
         </div>
-        <pre className="codeBox">
-          <code>
-            {`import {Button} from "@hygge-ui/components/Button;
-
-    <Button color="primary">Primary</Button>
-
-    <Button color="secondary">Secondary</Button>
-
-    <Button color="success">Success</Button>
-
-    <Button color="warning">Warning</Button>
-
-    <Button color="danger">Danger</Button>
-
-    <Buttons color="linkButton" isLink hrefLink="/">
-            Link
-    </Buttons>
-
-    <Buttons color="disabled" disabled={true}>
-            Disabled
-    </Buttons>
-              `}
-          </code>
-        </pre>
+        <Code language="javascript" codeString={ButtonExamples}></Code>
       </div>
 
       <div className="buttonsHeaderWrapper">
@@ -79,70 +62,32 @@ function App() {
           selected or deselected, such as adding or removing a star to an item.
         </p>
         <div className="buttonsContainer">
-          <IconButtons color="secondary">
+          <IconButton color="secondary">
             <X />
-          </IconButtons>
-          <IconButtons color="danger">
+          </IconButton>
+          <IconButton color="danger">
             <Trash />
-          </IconButtons>
-          <IconButtons color="secondary">
+          </IconButton>
+          <IconButton color="secondary">
             <Clock />
-          </IconButtons>
-          <IconButtons color="success">
+          </IconButton>
+          <IconButton color="success">
             <ShoppingCart />
-          </IconButtons>
-          <IconButtons color="primary">
+          </IconButton>
+          <IconButton color="primary">
             <Search />
-          </IconButtons>
-          <IconButtons color="success">
+          </IconButton>
+          <IconButton color="success">
             <Download />
-          </IconButtons>
-          <IconButtons color="disabled" disabled={true}>
+          </IconButton>
+          <IconButton color="disabled" disabled={true}>
             <Trash />
-          </IconButtons>
-          <IconButtons color="primary">
+          </IconButton>
+          <IconButton color="primary">
             <Upload />
-          </IconButtons>
+          </IconButton>
         </div>
-        <pre className="codeBox">
-          <code>
-            {`import {Button} from "@hygge-ui/components/Button;
-
-    <IconButtons color="secondary">
-            <X />
-    </IconButtons>
-
-    <IconButtons color="danger">
-            <Trash />
-    </IconButtons>
-
-    <IconButtons color="secondary">
-            <Clock />
-    </IconButtons>
-
-    <IconButtons color="success">
-            <ShoppingCart />
-    </IconButtons>
-
-    <IconButtons color="primary">
-            <Search />
-    </IconButtons>
-
-    <IconButtons color="success">
-            <Download />
-    </IconButtons>
-
-    <IconButtons color="disabled" disabled={true}>
-            <Trash />
-    </IconButtons>
-
-    <IconButtons color="primary">
-            <Upload />
-    </IconButtons>
-              `}
-          </code>
-        </pre>
-
+        <Code language="javascript" codeString={IconButtonExamples}></Code>
         <div className="buttonsHeaderWrapper">
           <h2>Size buttons</h2>
           <p>
@@ -150,104 +95,51 @@ function App() {
           </p>
           <div className="buttonsContainer">
             <div className="primaryBtnContainer">
-              <Buttons size="small" color="primary">
+              <Button size="small" color="primary">
                 Small
-              </Buttons>
-              <Buttons size="medium" color="primary">
+              </Button>
+              <Button size="medium" color="primary">
                 Medium
-              </Buttons>
-              <Buttons size="large" color="primary">
+              </Button>
+              <Button size="large" color="primary">
                 Large
-              </Buttons>
+              </Button>
             </div>
             <div className="secondaryBtnContainer">
-              <Buttons size="small" color="secondary">
+              <Button size="small" color="secondary">
                 Small
-              </Buttons>
-              <Buttons size="medium" color="secondary">
+              </Button>
+              <Button size="medium" color="secondary">
                 Medium
-              </Buttons>
-              <Buttons size="large" color="secondary">
+              </Button>
+              <Button size="large" color="secondary">
                 Large
-              </Buttons>
+              </Button>
             </div>
             <div className="closeIconBtnContainer">
-              <IconButtons size="small" color="secondary">
+              <IconButton size="small" color="secondary">
                 <X />
-              </IconButtons>
-              <IconButtons size="medium" color="secondary">
+              </IconButton>
+              <IconButton size="medium" color="secondary">
                 <X />
-              </IconButtons>
-              <IconButtons size="large" color="secondary">
+              </IconButton>
+              <IconButton size="large" color="secondary">
                 <X />
-              </IconButtons>
+              </IconButton>
             </div>
             <div className="deleteIconBtnContainer">
-              <IconButtons size="small" color="danger">
+              <IconButton size="small" color="danger">
                 <Trash />
-              </IconButtons>
-              <IconButtons size="medium" color="danger">
+              </IconButton>
+              <IconButton size="medium" color="danger">
                 <Trash />
-              </IconButtons>
-              <IconButtons size="large" color="danger">
+              </IconButton>
+              <IconButton size="large" color="danger">
                 <Trash />
-              </IconButtons>
+              </IconButton>
             </div>
           </div>
-          <pre className="codeBox">
-            <code>
-              {`import {Button} from "@hygge-ui/components/Button;
-
-   <Buttons size="small" color="primary">
-              Small
-    </Buttons>
-
-    <Buttons size="medium" color="primary">
-              Medium
-    </Buttons>
-
-    <Buttons size="large" color="primary">
-              Large
-    </Buttons>
-
-    <Buttons size="small" color="secondary">
-                Small
-    </Buttons>
-
-    <Buttons size="medium" color="secondary">
-                Medium
-    </Buttons>
-
-    <Buttons size="large" color="secondary">
-                Large
-    </Buttons>
-
-    <IconButtons size="small" color="secondary">
-                <X />
-    </IconButtons>
-
-    <IconButtons size="medium" color="secondary">
-                <X />
-    </IconButtons>
-
-    <IconButtons size="large" color="secondary">
-                <X />
-    </IconButtons>
-
-    <IconButtons size="small" color="danger">
-                <Trash />
-    </IconButtons>
-
-    <IconButtons size="medium" color="danger">
-                <Trash />
-    </IconButtons>
-
-    <IconButtons size="large" color="danger">
-                <Trash />
-    </IconButtons>
-              `}
-            </code>
-          </pre>
+          <Code language="javascript" codeString={SizeButtonExamples}></Code>
         </div>
 
         <div className="buttonsHeaderWrapper">
@@ -259,70 +151,36 @@ function App() {
             it with a dustbin icon.
           </p>
           <div className="buttonsContainer">
-            <Buttons color="primary" iconLabelBtn="iconLabelBtn">
+            <Button color="primary" iconLabelBtn="iconLabelBtn">
               <Send />
               Send
-            </Buttons>
-            <Buttons color="secondary" iconLabelBtn="iconLabelBtn">
+            </Button>
+            <Button color="secondary" iconLabelBtn="iconLabelBtn">
               <Upload />
               Upload
-            </Buttons>
-            <Buttons color="success" iconLabelBtn="iconLabelBtn">
+            </Button>
+            <Button color="success" iconLabelBtn="iconLabelBtn">
               <Mic />
               Talk
-            </Buttons>
-            <Buttons
+            </Button>
+            <Button
               color="disabled"
               iconLabelBtn="iconLabelBtn"
               disabled={true}
             >
               <MicOff />
               Muted
-            </Buttons>
-            <Buttons color="warning" iconLabelBtn="iconLabelBtn">
+            </Button>
+            <Button color="warning" iconLabelBtn="iconLabelBtn">
               <Save />
               Save
-            </Buttons>
-            <Buttons color="danger" iconLabelBtn="iconLabelBtn">
+            </Button>
+            <Button color="danger" iconLabelBtn="iconLabelBtn">
               <Trash />
               Delete
-            </Buttons>
+            </Button>
           </div>
-          <pre className="codeBox">
-            <code>
-              {`import {Button} from "@hygge-ui/components/Button;
-  <Buttons color="primary">
-              <Send />
-              Send
-  </Buttons>
-
-  <Buttons color="secondary">
-              <Upload />
-              Upload
-  </Buttons>
-
-  <Buttons color="success">
-              <Mic />
-              Talk
-  </Buttons>
-
-  <Buttons color="disabled" disabled={true}>
-              <MicOff />
-              Muted
-  </Buttons>
-
-  <Buttons color="warning">
-              <Save />
-              Save
-  </Buttons>
-
-  <Buttons color="danger">
-              <Trash />
-              Delete
-  </Buttons>
-              `}
-            </code>
-          </pre>
+          <Code language="javascript" codeString={IconLabelBtnExamples}></Code>
         </div>
 
         <div className="buttonsHeaderWrapper">
@@ -333,81 +191,43 @@ function App() {
             help maintain an emphasis on card content.
           </p>
           <div className="buttonsContainer">
-            <Buttons color="primary" textButton="textButton">
+            <Button color="primary" textButton="textButton">
               Primary
-            </Buttons>
-            <Buttons color="secondary" textButton="textButton">
+            </Button>
+            <Button color="secondary" textButton="textButton">
               Secondary
-            </Buttons>
-            <Buttons color="success" textButton="textButton">
+            </Button>
+            <Button color="success" textButton="textButton">
               Success
-            </Buttons>
-            <Buttons color="warning" textButton="textButton">
+            </Button>
+            <Button color="warning" textButton="textButton">
               Warning
-            </Buttons>
-            <Buttons color="danger" textButton="textButton">
+            </Button>
+            <Button color="danger" textButton="textButton">
               Danger
-            </Buttons>
-            <Buttons
+            </Button>
+            <Button
               color="linkButton"
               textButton="textButton"
               isLink
               hrefLink="/"
             >
               Link
-            </Buttons>
-            <Buttons color="disabled" textButton="textButton" disabled={true}>
+            </Button>
+            <Button color="disabled" textButton="textButton" disabled={true}>
               Disabled
-            </Buttons>
+            </Button>
           </div>
-          <pre className="codeBox">
-            <code>
-              {`import {Button} from "@hygge-ui/components/Button;
-
-  <Buttons color="primary" textButton="textButton">
-              Primary
-  </Buttons>
-
-  <Buttons color="secondary" textButton="textButton">
-              Secondary
-  </Buttons>
-
-  <Buttons color="success" textButton="textButton">
-              Success
-  </Buttons>
-
-  <Buttons color="warning" textButton="textButton">
-              Warning
-  </Buttons>
-
-  <Buttons color="danger" textButton="textButton">
-              Danger
-  </Buttons>
-
-  <Buttons
-              color="linkButton"
-              textButton="textButton"
-              isLink
-              hrefLink="/"
-            >
-              Link
-  </Buttons>
-
-  <Buttons color="disabled" textButton="textButton" disabled={true}>
-              Disabled
-  </Buttons>
-              `}
-            </code>
-          </pre>
+          <Code language="javascript" codeString={TextButtonExamples}></Code>
         </div>
 
         <div className="textHeaderWrapper">
-          <h1>Text</h1>
+          <h2>Text</h2>
           <p>
             Use typography text to present your design and content as clearly
             and efficiently as possible.
           </p>
-          <h2>Examples</h2>
+          <h3>Examples</h3>
           <div className="exampleTextContainer">
             <Text variant="h1">h1. Heading</Text>
             <Text variant="h2">h2. Heading</Text>

@@ -1,6 +1,6 @@
 import React from "react";
-import "./IconButtons.css";
-import "../Buttons/Buttons.css";
+import "./IconButton.css";
+import "../Button/Button.css";
 
 const IconButton = props => {
   const { color, children, disabled, size } = props;

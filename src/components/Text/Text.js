@@ -17,11 +17,7 @@ const Text = props => {
   } else if (variant === "h6") {
     return <h6>{children}</h6>;
   } else {
-    return (
-      <body>
-        <p>{children}</p>
-      </body>
-    );
+    return <p>{children}</p>;
   }
 };
 export default Text;
