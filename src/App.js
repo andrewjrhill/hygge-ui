@@ -1,27 +1,69 @@
 import React from "react";
 import {
   Trash,
+  BookOpen,
   Clock,
+  Info,
   ShoppingCart,
   Search,
   Download,
+  Home,
   X,
   Send,
   Upload,
   MicOff,
   Mic,
-  Save
+  Mail,
+  Save,
+  ChevronRight,
+  Minus,
+  Sun,
+  Settings,
+  Grid
 } from "react-feather";
 import "./App.css";
+import { Link, Router } from "@reach/router";
+import Links from "./components/Breadcrumbs/Links";
+import Breadcrumb from "./components/Breadcrumbs/Breadcrumb";
+import About from "./components/Breadcrumbs/PagesForBreadcrumbs/About";
+import Blog from "./components/Breadcrumbs/PagesForBreadcrumbs/Blog";
+import Contact from "./components/Breadcrumbs/PagesForBreadcrumbs/Contact";
+import Dashboard from "./components/Breadcrumbs/PagesForBreadcrumbs/Dashboard";
+import HyggeUIHome from "./components/Breadcrumbs/PagesForBreadcrumbs/HyggeUIHome";
 import Button from "./components/Button/Button";
 import Code from "./components/Code/Code";
 import IconButton from "./components/IconButton/IconButton";
 import Text from "./components/Text/Text";
+import Checkbox from "./components/Checkbox/Checkbox";
 import { ButtonExamples } from "./components/Button/Button.examples";
+import { CheckboxExamples } from "./components/Checkbox/Checkbox.examples";
 import { IconButtonExamples } from "./components/IconButton/IconButton.examples";
 import { IconLabelBtnExamples } from "./components/Button/IconLabelBtn.examples";
 import { SizeButtonExamples } from "./components/Button/SizeButton.examples";
 import { TextButtonExamples } from "./components/Button/TextButton.examples";
+
+const Separator = ({ children, ...props }) => (
+  <span style={{ color: "teal" }} {...props}>
+    {children}
+  </span>
+);
+
+const options = {
+  icons: {
+    HyggeUIHome: Home,
+    Dashboard: Settings,
+    Contact: Mail,
+    About: Info,
+    Blog: BookOpen
+  },
+  items: [
+    { to: "/", label: "HyggeUI" },
+    { to: "/dashboard", label: "Dashboard" },
+    { to: "/contact", label: "Contact" },
+    { to: "/about", label: "About" },
+    { to: "/blog", label: "Blog" }
+  ]
+};
 
 function App() {
   return (
@@ -242,6 +284,144 @@ function App() {
               laborum fugiat deleniti? Eum quasi quidem quibusdam.
             </Text>
           </div>
+          <h3>Accessibility</h3>
+          <p>A few key factors to follow for an accessible typography:</p>
+          <ul className="acessabilityContainer">
+            <li>
+              <strong>Color</strong>. Provide enough contrast between text and
+              its background, check out the minimum recommended{" "}
+              <a
+                className="link"
+                href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html"
+              >
+                WCAG 2.0 color contrast ratio{" "}
+              </a>
+              (4.5:1).
+            </li>
+            <li>
+              <strong>Font size</strong>. Use
+              <a
+                className="link"
+                href="https://material-ui.com/customization/typography/#font-size"
+              >
+                {" "}
+                relative units (rem){" "}
+              </a>
+              to accommodate the user's settings.
+            </li>
+            <li>
+              <strong>Heading hierarchy</strong>.
+              <a
+                className="link"
+                href="https://www.w3.org/WAI/tutorials/page-structure/headings/"
+              >
+                {" "}
+                Don't skip{" "}
+              </a>
+              heading levels. In order to solve this problem, you need to{" "}
+              <a
+                className="link"
+                href="https://material-ui.com/components/typography/#changing-the-semantic-element"
+              >
+                separate the semantics from the style.
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div className="textHeaderWrapper">
+          <h2>Checkboxes</h2>
+          <p>
+            Checkboxes allow the user to select one or more items from a set.{" "}
+            <a
+              className="link"
+              href="https://material.io/components/selection-controls#checkboxes"
+            >
+              Checkboxes
+            </a>{" "}
+            can be used to turn an option on or off. If you have multiple
+            options appearing in a list, you can preserve space by using
+            checkboxes instead of on/off switches. If you have a single option,
+            avoid using a checkbox and use an on/off switch instead.
+          </p>
+          <h3>Basic checkboxes</h3>
+          <div className="basicCheckboxContainer">
+            <Checkbox color="primary" checked="checked"></Checkbox>
+            <Checkbox color="secondary" checked="checked"></Checkbox>
+            <Checkbox color="secondary" checked="checked"></Checkbox>
+            <Checkbox color="secondary" checked="checked"></Checkbox>
+          </div>
+          <Code language="javascript" codeString={CheckboxExamples}></Code>
+        </div>
+
+        <div className="buttonsHeaderWrapper">
+          <h2>Breadcrumbs</h2>
+          <p>
+            Breadcrumbs allow users to make selections from a range of values.
+          </p>
+          <h3>Collapsed breadcrumb with routing</h3>
+          <div className="breadcrumbContainer">
+            <Breadcrumb separator={<Separator>/</Separator>}>
+              {options.items.map(({ to, label }) => {
+                const Icon = options.icons[label];
+                return (
+                  <div key={to} className="some-custom-classname">
+                    {Icon && <Icon />}
+                    <Link to={to}>{label}</Link>
+                  </div>
+                );
+              })}
+            </Breadcrumb>
+            <Router>
+              <HyggeUIHome path="/" />
+              <Dashboard path="/dashboard" />
+              <Contact path="/contact" />
+              <About path="/about" />
+              <Blog path="/blog" />
+            </Router>
+          </div>
+        </div>
+        <h3>Simple breadcrumb</h3>
+        <div className="breadcrumbContainer">
+          <Links linkColor="linkPrimary">HyggeUI /</Links>{" "}
+          <Links linkColor="linkPrimary">Core /</Links>{" "}
+          <Links linkColor="linkSecondary">Breadcrumb</Links>
+        </div>
+        <h3>Custom separator</h3>
+        <div className="breadcrumbContainer">
+          <Links linkColor="linkPrimary">HyggeUI</Links>
+          <Links linkColor="linkPrimary">
+            <ChevronRight />
+            Core
+          </Links>
+          <Links linkColor="linkSecondary">
+            <ChevronRight />
+            Breadcrumb
+          </Links>
+          <br />
+          <Links linkColor="linkPrimary">HyggeUI</Links>
+          <Links linkColor="linkPrimary">
+            <Minus />
+            Core
+          </Links>
+          <Links linkColor="linkSecondary">
+            <Minus />
+            Breadcrumb
+          </Links>
+        </div>
+        <h3>Breadcrumbs with icons</h3>
+        <div className="breadcrumbContainer">
+          <Links linkColor="linkPrimary">
+            <Home />
+            HyggeUI /
+          </Links>{" "}
+          <Links linkColor="linkPrimary">
+            <Sun />
+            Core /
+          </Links>{" "}
+          <Links linkColor="linkSecondary">
+            <Grid />
+            Breadcrumb
+          </Links>
         </div>
       </div>
     </header>

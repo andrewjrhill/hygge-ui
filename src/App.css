@@ -3,6 +3,9 @@ body {
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 }
 
+.acessabilityContainer {
+  text-align: start;
+}
 .App {
   text-align: center;
 }
@@ -73,12 +76,36 @@ body {
   align-items: center;
 }
 
+.link {
+  color: #ff0000;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
 .textHeaderWrapper {
   margin: 1rem;
   text-align: justify;
 }
 
 .exampleTextContainer {
+  border: 0.1rem;
+  border-color: #eeeeee;
+  border-style: solid;
+  margin-right: auto;
+  padding: 1rem;
+}
+.basicCheckboxContainer {
+  border: 0.1rem;
+  border-color: #eeeeee;
+  border-style: solid;
+  margin-right: auto;
+  padding: 1rem;
+}
+
+.breadcrumbContainer {
   border: 0.1rem;
   border-color: #eeeeee;
   border-style: solid;
