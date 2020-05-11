@@ -35,6 +35,8 @@ import Code from "./components/Code/Code";
 import IconButton from "./components/IconButton/IconButton";
 import Text from "./components/Text/Text";
 import Checkbox from "./components/Checkbox/Checkbox";
+import UseTextfield from "./components/Textfield/UseTextfield";
+import Textfield from "./components/Textfield/Textfield";
 import { ButtonExamples } from "./components/Button/Button.examples";
 import { CheckboxExamples } from "./components/Checkbox/Checkbox.examples";
 import { IconButtonExamples } from "./components/IconButton/IconButton.examples";
@@ -422,6 +424,37 @@ function App() {
             <Grid />
             Breadcrumb
           </Links>
+        </div>
+
+        <div className="textfieldHeaderWrapper">
+          <h2>Textfields</h2>
+          <p>
+            Textfields let users enter and edit text. Textfields allow users to
+            enter text into a UI. They typically appear in forms and dialogs.
+          </p>
+          <h3>Textfield</h3>
+          <div className="submitTextfieldContainer">
+            <UseTextfield>
+              <input type="text" />
+              <input type="submit" value="Submit" />
+            </UseTextfield>
+          </div>
+          <Code></Code>
+          <div className="filledTextfieldContainer">
+            <Textfield
+              HUIFilledTextfield="HUIFilledTextfield"
+              id="Filled"
+            ></Textfield>
+          </div>
+          <div className="OutlinedTextfieldContainer">
+            <Textfield
+              HUIOutlinedTextfield="HUIOutlinedTextfield"
+              id="Outlined"
+            ></Textfield>
+          </div>
+          <Code></Code>
+
+          <Textfield SelectForm></Textfield>
         </div>
       </div>
     </header>
